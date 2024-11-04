@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAKTHI SABAREESH.B | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Header Section with Profile Image -->
+    <header class="banner">
+        <div class="header-content">
+            <img src="my image new.jpeg" alt="Your Image" class="profile-pic">
+            <h1 class="animate-name">SAKTHI SABAREESH .B</h1>
+            <p class="tagline">Passionate Web Developer & Designer</p>
+        </div>
+        
+    </header>
+    <div id="modal" class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+    
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#about" class="hover-animate">About Me</a></li>
+            <li><a href="#skills" class="hover-animate">Skills</a></li>
+            <li><a href="#education" class="hover-animate">Education</a></li>
+            <li><a href="#projects" class="hover-animate">Projects</a></li>
+            <li><a href="#resume" class="hover-animate">Resume</a></li>
+            <li><a href="#contact" class="hover-animate">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p> As a second-year Bachelor of Computer Applications (BCA) student at Sri Krishna Arts and Science College, I am passionate about technology and design. My journey in the field of computing began with a curiosity for how things work, which has evolved into a commitment to creating innovative solutions. I have a solid foundation in programming languages such as Java, PHP, and JavaScript, and I am continuously expanding my skill set in web development and database management. My academic projects, including "Web Development and Database Optimization via Class Normalization" and "Generating Password to Handle Multiple Passwords for a Single Person," have allowed me to apply my knowledge in practical ways, enhancing my understanding of both front-end and back-end development.
+
+
+            I believe that technology should not only be functional but also user-friendly and aesthetically pleasing. This philosophy drives my work as I strive to build interactive and data-driven applications that make a difference in people's lives. I am particularly interested in full-stack development and automation, where I can combine my technical skills with creativity to solve real-world problems. I look forward to contributing to exciting projects and collaborating with like-minded individuals who share my passion for technology and innovation.</p>
+    </section>
+    <section id="education" class="education-section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <h3>Sri Krishna Arts and Science College</h3>
+            <p>Bachelor of Computer Applications (BCA)</p>
+            <p>2023 - 2026</p>
+            <div class="education-details" id="collegeDetails" style="display: none;">
+                <p><strong>Activities and Societies:</strong> Presented research papers at three conferences with work included in conference proceedings, developed multiple web applications, and actively participated in college workshops and seminars.</p>
+                <p>Currently pursuing foundational and advanced topics in computer science, with hands-on experience in Java, Spring Boot, MySQL, and PHP.</p>
+            </div>
+            <button onclick="toggleDetails('collegeDetails')" class="show-more-btn">Show More</button>
+        </div>
+        <div class="education-item">
+            <h3>Shenbagam Matriculation Higher Secondary School</h3>
+            <p>High School Diploma in Arts and Science with Computer Application</p>
+            <p>Graduated with a score of 81%</p>
+            <div class="education-details" id="schoolDetails" style="display: none;">
+                <p>Completed 12th grade with a focus on Computer Application. Actively participated in the Computer Club and various school events, building a solid foundation in both academics and extracurricular activities.</p>
+            </div>
+            <button onclick="toggleDetails('schoolDetails')" class="show-more-btn">Show More</button>
+        </div>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">
+                <h3>Java</h3>
+                <p>Proficient in core Java and object-oriented programming.</p>
+            </div>
+            <div class="skill-box">
+                <h3>Spring Boot</h3>
+                <p>Experienced in building robust back-end applications.</p>
+            </div>
+            <div class="skill-box">
+                <h3>MySQL</h3>
+                <p>Skilled in designing and optimizing relational databases.</p>
+            </div>
+            <div class="skill-box">
+                <h3>HTML & CSS</h3>
+                <p>Proficient in creating responsive and visually appealing layouts.</p>
+            </div>
+            <div class="skill-box">
+                <h3>JavaScript</h3>
+                <p>Knowledgeable in adding interactivity to web pages.</p>
+            </div>
+            <div class="skill-box">
+                <h3>PHP</h3>
+                <p>Experienced in server-side scripting and dynamic web content.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-cards">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="openProjectModal('project1')">
+                <div class="project-info">
+                    <h3>Generating Password to Handle Multiple Passwords for a Single Person</h3>
+                    <p>Developed at KG College Code-A-Thon, this project aimed to simplify password management for users juggling multiple accounts. The solution, crafted over an 8-hour coding marathon, utilizes Java to generate unique, secure passwords for each user account, enhancing security by minimizing the risk of password reuse</p>
+                </div>
+            </div>
+    
+            <!-- Project 2 -->
+            <div class="project-card" onclick="openProjectModal('project2')">
+                <div class="project-info">
+                    <h3>Optimizing Database Design Through Class Normalization in a Food Ordering System</h3>
+                    <p>In this project, I focused on enhancing the efficiency and integrity of a food ordering system by applying class normalization techniques to the database design. The goal was to eliminate data redundancy and ensure consistency, thereby improving the overall performance of the system. By leveraging class normalization, I was able to systematically structure the database to align with the relational theory principles, ultimately leading to a more scalable and reliable food ordering application.</p>
+                </div>
+            </div>
+    
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+    
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+            <div id="modalProjectContent"></div>
+        </div>
+    </div>
+    <!-- Certificates Section -->
+<section id="certificates">
+    <h2>Certificates</h2>
+    <div class="certificate-container">
+        <div class="certificate">
+            <h3 onclick="window.location.href='https://learn.mongodb.com/c/njC78cw9Rs68Lve-kAxQfg'" class="certificate-title">MongoDB Basics</h3>
+            <p>Issued by: ICT Academy Learnathon</p>
+            <p>Date Issued: Aug 2024</p>
+        </div>
+        <div class="certificate">
+            <h3 onclick="window.location.href='https://www.coursera.org/account/accomplishments/specialization/2UBVYXLLPH4W'" class="certificate-title">Core Java Specialization</h3>
+            <p>Issued by: LearnQuest</p>
+            <p>Date Issued: Jun 2024</p>
+            <p>Credential ID: 2UBVYXLLPH4W</p>
+        </div>
+        <div class="certificate">
+            <h3 onclick="window.location.href='https://www.coursera.org/account/accomplishments/specialization/XCMMGBGKTCXU'" class="certificate-title">Java Database Connectivity Specialization</h3>
+            <p>Issued by: LearnQuest</p>
+            <p>Date Issued: Jun 2024</p>
+            <p>Credential ID: XCMMGBGKTCXU</p>
+        </div>
+        <div class="certificate">
+            <h3 onclick="window.location.href='https://www.coursera.org/account/accomplishments/specialization/KMYQ7XRNYPL3'" class="certificate-title">Google Data Analytics Specialization</h3>
+            <p>Issued by: Google</p>
+            <p>Date Issued: Jun 2024</p>
+            <p>Credential ID: KMYQ7XRNYPL3</p>
+        </div>
+    </div>
+</section>
+
+    
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="my resume (1).pdf" class="resume-download" download>Download My Resume (PDF)</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Linkedin:   <a href=" https://www.linkedin.com/in/sakthi-sabareesh-b-5200322a3/"> sakthi-sabareesh-b-5200322a3</a></p>
+        <p>Email: <a href="mailto:sakthisabareesh1920@gmail.com">sakthisabareesh1920gmail.com</a></p>
+        <p>Phone:+91 7539917977</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 SAKTHI SABAREESH. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
